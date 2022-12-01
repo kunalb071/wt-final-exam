@@ -1,0 +1,675 @@
+<!-- QUESTION BANK FOR WT FINAL EXAM
+1)	Recreate the Image Given below using HTML & CSS.
+Let the background be of color - #191919
+The color of the cirle should be - #F9E492
+The color of the triangle must be - #4F77FF
+The area of intersection of circle & triange must be - #191919 same as that of the background
+
+2)	Create a function to sort a given array into ascending order
+
+3)	Complete the square sum function so that it squares each number passed into it 
+               and then sums the results together
+               For example, for [1, 2, 2] it should return 9 because 1^2 + 2^2 + 2^2 = 9
+4)	Recreate your class Time table using html & css only.
+5)	Write a function that will take the number of petals of each flower and return true if      
+                  they are in love and false if they aren't.
+6)	Write a function that will take the number of petals of each flower and return true if      
+                  they are in love and false if they aren't.
+7)	 Write a PHP program that displays a different message based on time of day. For eg. Page should display “Good Morning: if it is accessed in the morning.
+8)	Write a JavaScript function that accepts a string as a parameter and converts the first letter of each word of the string in upper case. Example string : 'the quick brown fox' Expected Output : 'The Quick Brown Fox '
+9)	Write a Javascript program to calculate the days left for New Years EVE 2023.
+10)	Write Javascript code to count the no. Of vowels in a string for eg. ‘The Quick Brown Fox’. The output for this should be : 5.
+11)	 Write a Javascript function to reverse a string.
+12)	Write a Javascript function to validate a palindrome.
+13)	Write a Javascript function to reverse an Integer.
+14)	Write a JavaScript function to capitalize the first letter of each word passed in.
+15)	Write a program that prints all the numbers from 1 to 100.
+ for muliples of 3, instead of the number, print 'Fizz' for multiples of 5 print 'Buzz',
+  for numbers which are multiples of both 3 & 5, print 'FizzBuzz'.
+16)	Write a Javascript program to calculate the no. Of days left before New Years Eve 2023.
+17)	Write a PHP Program to write your full name into a .txt file.
+18)	 Create a database using phpMyAdmin & insert data into a table using forms.
+19)	 Write a PHP Program to upload a file (Image file) onto the server.
+20)	Write a PHP program to list all the cookies stored on the press of a button.
+Solutions:
+1]
+https://www.geeksforgeeks.org/how-to-create-triangle-in-css/#:~:text=Normally%20there%20is%20no%20direct,Triangle's%20actual%20width%20and%20height.
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_circles
+2]
+// Bubble sort Implementation using Javascript
+// Creating the bblSort function
+function bblSort(arr){
+	
+for(var i = 0; i < arr.length; i++){
+	
+// Last i elements are already in place
+for(var j = 0; j < ( arr.length - i -1 ); j++){
+	
+	// Checking if the item at present iteration
+	// is greater than the next iteration
+	if(arr[j] > arr[j+1]){
+// If the condition is true then swap them
+	var temp = arr[j]
+	arr[j] = arr[j + 1]
+	arr[j+1] = temp
+	}
+}
+}
+// Print the sorted array
+console.log(arr);
+}
+// This is our unsorted array
+var arr = [234, 43, 55, 63, 5, 6, 235, 547];
+// Now pass this array to the bblSort() function
+bblSort(arr);
+
+3]
+sum =0;
+console.log(sum);
+function squareSum(num)
+    {
+        sum+= Math.pow(num,2);
+       
+    }
+
+4]
+<!DOCTYPE html>
+<html>
+
+<body>
+	<h1>TIME TABLE</h1>
+	<table border="5" cellspacing="0" align="center">
+		<!--<caption>Timetable</caption>-->
+		<tr>
+			<td align="center" height="50"
+				width="100"><br>
+				<b>Day/Period</b></br>
+			</td>
+			<td align="center" height="50"
+				width="100">
+				<b>I<br>9:30-10:20</b>
+			</td>
+			<td align="center" height="50"
+				width="100">
+				<b>II<br>10:20-11:10</b>
+			</td>
+			<td align="center" height="50"
+				width="100">
+				<b>III<br>11:10-12:00</b>
+			</td>
+			<td align="center" height="50"
+				width="100">
+				<b>12:00-12:40</b>
+			</td>
+			<td align="center" height="50"
+				width="100">
+				<b>IV<br>12:40-1:30</b>
+			</td>
+			<td align="center" height="50"
+				width="100">
+				<b>V<br>1:30-2:20</b>
+			</td>
+			<td align="center" height="50"
+				width="100">
+				<b>VI<br>2:20-3:10</b>
+			</td>
+			<td align="center" height="50"
+				width="100">
+				<b>VII<br>3:10-4:00</b>
+			</td>
+		</tr>
+		<tr>
+			<td align="center" height="50">
+				<b>Monday</b></td>
+			<td align="center" height="50">Eng</td>
+			<td align="center" height="50">Mat</td>
+			<td align="center" height="50">Che</td>
+			<td rowspan="6" align="center" height="50">
+				<h2>L<br>U<br>N<br>C<br>H</h2>
+			</td>
+			<td colspan="3" align="center"
+				height="50">LAB</td>
+			<td align="center" height="50">Phy</td>
+		</tr>
+		<tr>
+			<td align="center" height="50">
+				<b>Tuesday</b>
+			</td>
+			<td colspan="3" align="center"
+				height="50">LAB
+			</td>
+			<td align="center" height="50">Eng</td>
+			<td align="center" height="50">Che</td>
+			<td align="center" height="50">Mat</td>
+			<td align="center" height="50">SPORTS</td>
+		</tr>
+		<tr>
+			<td align="center" height="50">
+				<b>Wednesday</b>
+			</td>
+			<td align="center" height="50">Mat</td>
+			<td align="center" height="50">phy</td>
+			<td align="center" height="50">Eng</td>
+			<td align="center" height="50">Che</td>
+			<td colspan="3" align="center"
+				height="50">LIBRARY
+			</td>
+		</tr>
+		<tr>
+			<td align="center" height="50">
+				<b>Thursday</b>
+			</td>
+			<td align="center" height="50">Phy</td>
+			<td align="center" height="50">Eng</td>
+			<td align="center" height="50">Che</td>
+			<td colspan="3" align="center"
+				height="50">LAB
+			</td>
+			<td align="center" height="50">Mat</td>
+		</tr>
+		<tr>
+			<td align="center" height="50">
+				<b>Friday</b>
+			</td>
+			<td colspan="3" align="center"
+				height="50">LAB
+			</td>
+			<td align="center" height="50">Mat</td>
+			<td align="center" height="50">Che</td>
+			<td align="center" height="50">Eng</td>
+			<td align="center" height="50">Phy</td>
+		</tr>
+		<tr>
+			<td align="center" height="50">
+				<b>Saturday</b>
+			</td>
+			<td align="center" height="50">Eng</td>
+			<td align="center" height="50">Che</td>
+			<td align="center" height="50">Mat</td>
+			<td colspan="3" align="center"
+				height="50">SEMINAR
+			</td>
+			<td align="center" height="50">SPORTS</td>
+		</tr>
+	</table>
+</body>
+
+</html>
+5]6]
+function lovePetals(flower1, flower2) {
+  if (flower1 % 2 === 0 && flower2 % 2 === 1 || flower1 % 2 === 1 && flower2 % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}lovePetals(1, 4);  // true
+lovePetals(2, 4);  // false
+
+7]
+
+<?php 
+$dat = new DateTime('now', new DateTimeZone('Asia/Kolkata'));
+$date=$dat->format('H');
+if($date < 12) 
+  echo "Good morning to everyone"; 
+else if($date < 17) 
+  echo "Good afternoon to everyone";
+else if($date<20)
+  echo "Good evening to everyone"; 
+else 
+  echo "Good night to everyone"; 
+?>
+
+8] function uppercase(str)
+{
+  var array1 = str.split(' ');
+  var newarray1 = [];
+    
+  for(var x = 0; x < array1.length; x++){
+      newarray1.push(array1[x].charAt(0).toUpperCase()+array1[x].slice(1));
+  }
+  return newarray1.join(' ');
+}
+
+
+let result =uppercase("The quick brown fox");
+console.log(result);
+
+9] 16] // Get the current date
+    let today = new Date();
+  
+    // Get the year of the current date
+    let NewYearEve = today.getFullYear();
+  
+    // Check if the current date is
+    // already past by checking if the month
+    // is December and the current day
+    // is greater than 25
+    if (today.getMonth() == 11 &&
+        today.getDate() > 31) {
+  
+      // Add an year so that the next
+      // Christmas date could be used
+      NewYearEve = NewYearEve + 1;
+    }
+  
+    // Get the date of the next Christmas
+    let EveDate = 
+        new Date(NewYearEve, 11, 31);
+  
+    // Get the number of milliseconds in 1 day
+    let dayMilliseconds =
+        1000 * 60 * 60 * 24;
+  
+    // Get the remaining amount of days
+    let remainingDays = Math.ceil(
+      (EveDate.getTime() - today.getTime()) /
+      (dayMilliseconds)
+    );
+  
+    // Write it to the page
+    document.write("There are " + remainingDays +
+                   " days remaining until Christmas.");
+10]
+function vowel_count(str1)
+{
+  var vowel_list = 'aeiouAEIOU';
+  var vcount = 0;
+  
+  for(var x = 0; x < str1.length ; x++)
+  {
+    if (vowel_list.indexOf(str1[x]) !== -1)
+    {
+      vcount += 1;
+    }
+  
+  }
+  return vcount;
+}
+console.log(vowel_count("The quick brown fox"));
+11]
+// program to reverse a string
+
+function reverseString(str) {
+
+    // empty string
+    let newString = "";
+    for (let i = str.length - 1; i >= 0; i--) {
+        newString += str[i];
+    }
+    return newString;
+}
+
+// take input from the user
+const string ="Hello World";
+
+const result = reverseString(string);
+console.log(result);
+
+12]
+
+// function to reverse the string
+function reverse( str )
+{
+	// variable holds reverse string
+	let rev_str = "";
+	for( let i = str.length-1 ;i >= 0 ;i--)
+	{
+	rev_str+= str[i];
+	}
+	// return reverse string
+	return rev_str;
+}
+
+// function checking string is palindrome or not
+function is_palindrome( str )
+{
+	reverse_str = reverse(str);
+	// condition checking if reverse str is
+	// same as string it is palindrome
+	// else not a palindrome
+	if( reverse_str === str)
+	{
+	console.log("passed string is palindrome ");
+	}
+	else
+	{
+	console.log("passed string is not palindrome")
+	}
+}
+let test = "helolleh";
+is_palindrome(test);
+13]
+function reverse_a_number(n)
+{
+	n = n + "";
+	return n.split("").reverse().join("");
+}
+console.log(Number(reverse_a_number(32243)));
+
+14]
+function capital_letter(str) 
+{
+    str = str.split(" ");
+
+    for (var i = 0, x = str.length; i < x; i++) {
+        str[i] = str[i][0].toUpperCase() + str[i].substr(1);
+    }
+
+    return str.join(" ");
+}
+
+console.log(capital_letter("write"));
+
+15]
+
+
+	let i;
+	for (i=1; i<=100; i++)
+	{
+		// number divisible by 3 and 5 will
+		// always be divisible by 15, print
+		// 'FizzBuzz' in place of the number
+		if (i%15 == 0)
+			document.write("FizzBuzz" + " ");
+		
+		// number divisible by 3? print 'Fizz'
+		// in place of the number
+		else if ((i%3) == 0)
+			document.write("Fizz" + " ");			
+		
+		// number divisible by 5, print 'Buzz'
+		// in place of the number
+		else if ((i%5) == 0)				
+			document.write("Buzz" + " ");			
+	
+		else // print the number	
+			document.write(i + " ");			
+	}
+
+17]
+<?php
+$myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
+$txt = "John Doe\n";
+fwrite($myfile, $txt);
+$txt = "Jane Doe\n";
+fwrite($myfile, $txt);
+fclose($myfile);
+?>
+18]
+PHP file1
+<?php
+
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "database_name";
+
+// Create connection
+$conn = new mysqli($servername,
+	$username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+	die("Connection failed: "
+		. $conn->connect_error);
+}
+
+$sqlquery = "INSERT INTO table VALUES
+	('John', 'Doe', 'john@example.com')"
+
+if ($conn->query($sql) === TRUE) {
+	echo "record inserted successfully";
+} else {
+	echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+//file2
+<?php
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+	// collect value of input field
+	$data = $_REQUEST['val1'];
+
+	if (empty($data)) {
+		echo "data is empty";
+	} else {
+		echo $data;
+	}
+}
+?>
+
+// Closing the connection.
+$conn->close();
+
+?>
+
+//index.php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>GFG- Store Data</title>
+</head>
+<body>
+	<center>
+		<h1>Storing Form data in Database</h1>
+		<form action="insert.php" method="post">
+			
+<p>
+			<label for="firstName">First Name:</label>
+			<input type="text" name="first_name" id="firstName">
+			</p>
+
+			
+<p>
+			<label for="lastName">Last Name:</label>
+			<input type="text" name="last_name" id="lastName">
+			</p>
+
+			
+<p>
+			<label for="Gender">Gender:</label>
+			<input type="text" name="gender" id="Gender">
+			</p>
+
+			
+<p>
+			<label for="Address">Address:</label>
+			<input type="text" name="address" id="Address">
+			</p>
+
+			
+<p>
+			<label for="emailAddress">Email Address:</label>
+			<input type="text" name="email" id="emailAddress">
+			</p>
+
+			<input type="submit" value="Submit">
+		</form>
+	</center>
+</body>
+</html>
+
+//insert.php
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Insert Page page</title>
+</head>
+
+<body>
+	<center>
+		<?php
+
+		// servername => localhost
+		// username => root
+		// password => empty
+		// database name => staff
+		$conn = mysqli_connect("localhost", "root", "", "staff");
+		
+		// Check connection
+		if($conn === false){
+			die("ERROR: Could not connect. "
+				. mysqli_connect_error());
+		}
+		
+		// Taking all 5 values from the form data(input)
+		$first_name = $_REQUEST['first_name'];
+		$last_name = $_REQUEST['last_name'];
+		$gender = $_REQUEST['gender'];
+		$address = $_REQUEST['address'];
+		$email = $_REQUEST['email'];
+		
+		// Performing insert query execution
+		// here our table name is college
+		$sql = "INSERT INTO college VALUES ('$first_name',
+			'$last_name','$gender','$address','$email')";
+		
+		if(mysqli_query($conn, $sql)){
+			echo "<h3>data stored in a database successfully."
+				. " Please browse your localhost php my admin"
+				. " to view the updated data</h3>";
+
+			echo nl2br("\n$first_name\n $last_name\n "
+				. "$gender\n $address\n $email");
+		} else{
+			echo "ERROR: Hush! Sorry $sql. "
+				. mysqli_error($conn);
+		}
+		
+		// Close connection
+		mysqli_close($conn);
+		?>
+	</center>
+</body>
+
+</html>
+
+https://www.geeksforgeeks.org/how-to-insert-form-data-into-database-using-php/
+19]
+https://www.w3schools.com/php/php_file_upload.asp
+
+Configure The "php.ini" File
+First, ensure that PHP is configured to allow file uploads.
+In your "php.ini" file, search for the file_uploads directive, and set it to On:
+//html form for image file upload
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<form action="upload.php" method="post" enctype="multipart/form-data">
+  Select image to upload:
+  <input type="file" name="fileToUpload" id="fileToUpload">
+  <input type="submit" value="Upload Image" name="submit">
+</form>
+
+</body>
+</html>
+
+//Uploadfile script
+//upload.php
+<?php
+$target_dir = "uploads/";
+$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+$uploadOk = 1;
+$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+
+// Check if image file is a actual image or fake image
+if(isset($_POST["submit"])) {
+  $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+  if($check !== false) {
+    echo "File is an image - " . $check["mime"] . ".";
+    $uploadOk = 1;
+  } else {
+    echo "File is not an image.";
+    $uploadOk = 0;
+  }
+}
+
+// Check if file already exists
+if (file_exists($target_file)) {
+  echo "Sorry, file already exists.";
+  $uploadOk = 0;
+}
+
+// Check file size
+if ($_FILES["fileToUpload"]["size"] > 500000) {
+  echo "Sorry, your file is too large.";
+  $uploadOk = 0;
+}
+
+// Allow certain file formats
+if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+&& $imageFileType != "gif" ) {
+  echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+  $uploadOk = 0;
+}
+
+// Check if $uploadOk is set to 0 by an error
+if ($uploadOk == 0) {
+  echo "Sorry, your file was not uploaded.";
+// if everything is ok, try to upload file
+} else {
+  if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+    echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+  } else {
+    echo "Sorry, there was an error uploading your file.";
+  }
+}
+?>
+20]
+<?php
+print_r($_COOKIE);
+?>
+
+//OR
+
+<!DOCTYPE html>
+<html>
+	
+<head>
+	<title>
+		How to call PHP function
+		on the click of a Button ?
+	</title>
+</head>
+
+<body style="text-align:center;">
+	
+	<h1 style="color:green;">
+		GeeksforGeeks
+	</h1>
+	
+	<h4>
+		How to call PHP function
+		on the click of a Button ?
+	</h4>
+	
+	<?php
+		if(array_key_exists('button1', $_POST)) {
+			button1();
+		}
+		else if(array_key_exists('button2', $_POST)) {
+			button2();
+		}
+		function button1() {
+			echo "This is Button1 that is selected";
+		}
+		function button2() {
+			echo "This is Button2 that is selected";
+		}
+	?>
+
+	<form method="post">
+		<input type="submit" name="button1"
+				class="button" value="Button1" />
+		
+		<input type="submit" name="button2"
+				class="button" value="Button2" />
+	</form>
+</body>
+
+</html> -->

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+function bblSort(arr){
+    let arr_copy=arr;
+	
+    for(var i = 0; i < arr.length; i++){
+     
+        for(var j = 0; j < ( arr.length - i -1 ); j++){
+        
+            if(arr[j] > arr[j+1]){
+    
+                var temp = arr[j]
+                arr[j] = arr[j + 1]
+                arr[j+1] = temp
+                }
+             }
+        
+        }
+        if(arr_copy.sort() == arr)
+            {
+                return true;
+            }
+        else
+            {
+                return false;
+            }
+    }
+   
+    var arr = [234, 43, 55, 63, 5, 6, 235, 547];
+    
+    let result =bblSort(arr);
+    console.log(result);
+   
+</script>
+<body>
+    
+</body>
+</html>

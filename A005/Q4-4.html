@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+
+
+UserCart = [{productId:1,productName:"Mobile",price:70000},
+{productId:2,productName:"Laptop",price:100000},
+{productId:3,productName:"Airpods",price:26900},
+{productId:4,productName:"Watch",price:30000},
+{productId:5,productName:"Shoes",price:35000},
+{productId:6,productName:"Bag",price:10000}
+]
+
+var sum=0;
+sum = UserCart.reduce(test);
+function test(total,num)
+    {
+        console.log("num is: "+num);
+        console.log("total is: "+total);
+        return(total + num.price);
+    }
+console.log(sum);
+// let result = reduce(test);
+// const numbers = [175, 50, 25];
+
+// document.getElementById("demo").innerHTML = numbers.reduce(myFunc);
+
+// function myFunc(total, num) {
+//   return total - num;
+// }
+
+</script>
+<body>
+    
+</body>
+</html>

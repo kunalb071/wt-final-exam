@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+   
+    let today = new Date();
+  
+  
+    let Christmas = today.getFullYear();
+  
+   
+    if (today.getMonth() == 11 &&
+        today.getDate() > 31) {
+  
+      
+      Christmas = Christmas + 1;
+    }
+  
+    
+    let EveDate = 
+        new Date(Christmas, 11, 25);
+  
+    
+    let dayMilliseconds =
+        1000 * 60 * 60 * 24;
+  
+    // Get the remaining amount of days
+    let remainingDays = Math.ceil(
+      (EveDate.getTime() - today.getTime()) /
+      (dayMilliseconds)
+    );
+  
+    // Write it to the page
+    document.write("There are " + remainingDays +
+                   " days remaining until Christmas.");
+</script>
+<body>
+    
+</body>
+</html>
